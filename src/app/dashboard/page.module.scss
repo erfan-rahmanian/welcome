@@ -1,0 +1,149 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 1rem;
+}
+
+.dashboard {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .logoutButton {
+    flex-shrink: 0;
+  }
+}
+
+.userInfo {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+
+  .avatar {
+    flex-shrink: 0;
+
+    .avatarImage {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #e2e8f0;
+      object-fit: cover;
+    }
+  }
+
+  .userDetails {
+    flex: 1;
+
+    .userName {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a202c;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .userEmail {
+      color: #3b82f6;
+      font-weight: 500;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .userLocation {
+      color: #718096;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .userPhone {
+      color: #718096;
+      margin: 0;
+    }
+  }
+}
+
+.welcomeMessage {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8fafc;
+
+  p {
+    font-size: 1.125rem;
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.25rem;
+  color: #718096;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .header {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+
+  .userInfo {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+
+    .avatar {
+      .avatarImage {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .userDetails {
+      .userName {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .welcomeMessage {
+    padding: 1.5rem;
+
+    p {
+      font-size: 1rem;
+    }
+  }
+} 
